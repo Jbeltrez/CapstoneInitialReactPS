@@ -1,0 +1,15 @@
+/* Header.css */
+.app-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2c003e; /* Dark Purple */
+  padding: 15px;
+  height: 80px;
+}
+
+.logo {
+  max-width: 200px; /* Adjust size */
+  height: auto;
+}
+

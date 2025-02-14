@@ -1,22 +1,19 @@
 /* src/pages/Menus.css */
 .menus-page {
   padding: 20px;
-}
-
-.menus-list {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  background: #ffffff;
+  color: #2c3e50;
 }
 
 .menu-card {
-  background: #ecf0f1;
+  background: #ffffff;
+  color: #2c3e50;
   padding: 15px;
-  border-radius: 6px;
-  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.menu-details {
-  margin-top: 20px;
+.menu-card h2 {
+  color: #2c3e50;
 }
 
