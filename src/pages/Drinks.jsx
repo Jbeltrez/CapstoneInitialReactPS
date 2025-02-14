@@ -1,4 +1,3 @@
-// src/pages/Drinks.jsx
 import React, { useState } from "react";
 import { initialCategories, initialDrinks } from "../state/data";
 import "./Drinks.css";
@@ -9,7 +8,6 @@ const Drinks = () => {
   const [drinkDescription, setDrinkDescription] = useState("");
   const [selectedCategories, setSelectedCategories] = useState([]);
 
-  // Add a new drink
   const handleAddDrink = () => {
     if (!drinkName.trim()) return;
     const newDrink = {
@@ -24,23 +22,10 @@ const Drinks = () => {
     setSelectedCategories([]);
   };
 
-  // Edit a drink's name or description
-  const handleEditDrink = (id, newName, newDescription) => {
-    setDrinks(drinks.map(drink => 
-      drink.id === id ? { ...drink, name: newName, description: newDescription } : drink
-    ));
-  };
-
-  // Remove a drink
-  const handleRemoveDrink = (id) => {
-    setDrinks(drinks.filter(drink => drink.id !== id));
-  };
-
   return (
     <div className="drinks-page">
       <h1>Manage Drinks</h1>
 
-      {/* Add Drink Form */}
       <div className="add-drink-form">
         <input 
           type="text" 
@@ -76,28 +61,19 @@ const Drinks = () => {
         <button onClick={handleAddDrink}>Add Drink</button>
       </div>
 
-      {/* List of Drinks */}
-      <ul className="drinks-list">
+      <div className="drinks-list">
         {drinks.map((drink) => (
-          <li key={drink.id}>
-            <input
-              type="text"
-              value={drink.name}
-              onChange={(e) => handleEditDrink(drink.id, e.target.value, drink.description)}
-            />
-            <textarea
-              value={drink.description}
-              onChange={(e) => handleEditDrink(drink.id, drink.name, e.target.value)}
-            />
+          <div key={drink.id} className="drink-card">
+            <h3>{drink.name}</h3>
+            <p>{drink.description}</p>
             <div className="drink-categories">
               {drink.categories.map(cat => (
                 <span key={cat} className="category-icon">{initialCategories.find(c => c.name === cat)?.icon}</span>
               ))}
             </div>
-            <button onClick={() => handleRemoveDrink(drink.id)}>Remove</button>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

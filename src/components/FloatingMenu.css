@@ -1,18 +1,10 @@
 /* src/components/FloatingMenu.css */
-.floating-menu {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
-
 .floating-menu button {
-  margin-left: 10px;
-  padding: 10px;
-  background: #2980b9;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  background: #3498db;
+  color: white; /* Ensures button text is readable */
 }
 
+.floating-menu button:hover {
+  background: #2980b9;
+}
 

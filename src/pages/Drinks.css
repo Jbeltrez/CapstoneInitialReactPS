@@ -1,26 +1,64 @@
-/* src/pages/Drinks.css */
+/* Drinks.css */
 .drinks-page {
   padding: 20px;
+  margin-left: 240px; /* To avoid sidebar overlap */
 }
 
-.filter-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.add-drink-form {
+  background: #ecf0f1;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
   margin-bottom: 20px;
 }
 
-.filter-bar button {
-  padding: 5px 10px;
+.add-drink-form input,
+.add-drink-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #bdc3c7;
+}
+
+.add-drink-form button {
+  background: #27ae60;
+  color: white;
   border: none;
-  border-radius: 4px;
-  background: #bdc3c7;
-  color: #2c3e50;
+  padding: 10px 15px;
+  border-radius: 5px;
   cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-drink-form button:hover {
+  background: #2ecc71;
 }
 
 .drinks-list {
-  list-style: none;
-  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.drink-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.drink-categories {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.category-icon {
+  font-size: 1.2rem;
+  background: #f1c40f;
+  padding: 5px;
+  border-radius: 5px;
 }
 
