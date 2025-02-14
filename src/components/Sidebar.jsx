@@ -1,14 +1,15 @@
 // src/components/Sidebar.jsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Sidebar.css';
 
-const Sidebar = ({ setCurrentPage }) => {
+const Sidebar = () => {
   return (
     <div className="sidebar">
       <ul>
-        <li onClick={() => setCurrentPage('home')}>Home</li>
-        <li onClick={() => setCurrentPage('drinks')}>Drinks</li>
-        <li onClick={() => setCurrentPage('menus')}>Menus</li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/drinks">Drinks</Link></li>
+        <li><Link to="/menus">Menus</Link></li>
       </ul>
     </div>
   );

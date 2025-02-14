@@ -1,12 +1,17 @@
 // src/components/FloatingMenu.jsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './FloatingMenu.css';
 
-const FloatingMenu = ({ setCurrentPage }) => {
+const FloatingMenu = () => {
   return (
     <div className="floating-menu">
-      <button onClick={() => setCurrentPage('drinks')}>New Drink</button>
-      <button onClick={() => setCurrentPage('menus')}>New Menu</button>
+      <Link to="/drinks">
+        <button>New Drink</button>
+      </Link>
+      <Link to="/new-menu">
+        <button>New Menu</button>
+      </Link>
     </div>
   );
 };
