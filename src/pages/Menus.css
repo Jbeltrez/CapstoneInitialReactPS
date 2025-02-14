@@ -1,0 +1,22 @@
+/* src/pages/Menus.css */
+.menus-page {
+  padding: 20px;
+}
+
+.menus-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu-card {
+  background: #ecf0f1;
+  padding: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.menu-details {
+  margin-top: 20px;
+}
+
